@@ -21,7 +21,7 @@ def fetchToken():
     }
     data = {
        'username': 'maintainer',
-       'password': 'hashed_password_1',
+       'password': 'test!Test1',
     }
     response = requests.post(USER_SERVICE_URL, headers=header, data=json.dumps(data))
     return response.json()['token']
@@ -82,13 +82,16 @@ def fetchLeetCodeToDB(request):
   request_args = request.args
 
   if request_json and "num" in request_json:
-    num = request_json["num"]
+    num = int(request_json["num"])
   elif request_args and "num" in request_args:
-    num = request_args["num"]
+    num = int(request_args["num"])
   else:
     num = 10
 
-  finalNum = updateQuestionsDB(num)
+  if num > 0:  
+    finalNum = updateQuestionsDB(num)
+  else:
+    finalNum = 0   
 
   # Return an HTTP response
   headers = {"Access-Control-Allow-Origin": "*"}

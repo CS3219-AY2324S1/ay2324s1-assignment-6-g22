@@ -3,6 +3,10 @@
 # Testing (Local)
 
 - The serverless function is written in Python and takes in http request calls.
+- The serverless function aims to populate PeerPrep's question bank with a large number of questions from Leetcode.
+- The serverless function fetches questions from Leetcode in order of their question list. This means that everytime the function is run, it will start inserting from the same first question in Leetcode's list (assuming the list has no changes).
+- For testing purposes, it is recommended to fetch only a small number of questions from Leetcode. But due to the previous point, as PeerPrep will not accept duplicate questions, you will have to increase the number of fetched questions or delete previously inserted questions for repeated testing.
+- The PeerPrep question database you will be interacting with is hosted in the cloud. Please avoid deleting the first 9 questions and only delete questions you have inserted.
 
 ### Setup
 
@@ -31,3 +35,8 @@ functions-framework --target fetchLeetCodeToDB --debug
 ```
 http://localhost:8080/?num=2
 ```
+
+- Indicate the number of questions to fetch using num=#
+- The final number of questions inserted may not be the same as num due to several reasons
+- 1. Premium Questions
+- 2. Question is already in PeerPrep
