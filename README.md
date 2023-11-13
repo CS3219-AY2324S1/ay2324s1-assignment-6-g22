@@ -1,12 +1,25 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/UxpU_KWG)
 
-# Testing (Local)
+# About
 
-- The serverless function is written in Python and takes in http request calls.
-- The serverless function aims to populate PeerPrep's question bank with a large number of questions from Leetcode.
-- The serverless function fetches questions from Leetcode in order of their question list. This means that everytime the function is run, it will start inserting from the same first question in Leetcode's list (assuming the list has no changes).
-- For testing purposes, it is recommended to fetch only a small number of questions from Leetcode. But due to the previous point, as PeerPrep will not accept duplicate questions, you will have to increase the number of fetched questions or delete previously inserted questions for repeated testing.
-- The PeerPrep question database you will be interacting with is hosted in the cloud. Please avoid deleting the first 9 questions and only delete questions you have inserted.
+- 1. The serverless function is written in Python and takes in http request calls.
+- 2. The serverless function aims to populate PeerPrep's question bank with a large number of questions from Leetcode.
+- 3. The serverless function fetches questions from Leetcode in order of their question list. This means that everytime the function is run, it will start inserting from the same first question in Leetcode's list (assuming the list has no changes).
+- 4. For testing purposes, it is recommended to fetch only a small number of questions from Leetcode to save time. For repeated testing, you should be aware that PeerPrep will not add duplicate questions. Hence, as per point 3, you will have to delete inserted questions between each run or increase the number of questions fetched each successive run.
+- 5. The PeerPrep question database you will be interacting with is hosted in the cloud. Please avoid deleting the first 9 questions and only delete questions you have inserted.
+
+# Testing (Cloud: Cloud Serverless Function with Cloud PeerPrep)
+
+- Access [PrepPrpe](http://35.247.174.141:3000/)
+
+- Run the [Serverless Function](https://asia-southeast1-peerprep-402404.cloudfunctions.net/serverlessfunc/?num=5)
+
+- Indicate the number of questions to fetch using num=# in the url.
+- The final number of questions inserted may not be the same as num due to several reasons
+- 1. Premium Questions
+- 2. Question is already in PeerPrep
+
+# Testing (Local: Local Serverless Function with Local PeerPrep)
 
 ### Setup
 

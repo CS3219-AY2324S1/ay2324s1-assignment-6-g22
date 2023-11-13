@@ -1,0 +1,16 @@
+{
+  "configurations": [
+    {
+      "name": "Deploy Cloud Function",
+      "type": "cloudcode.cloudfunctions",
+      "request": "launch",
+      "functionName": "serverlessfunc",
+      "gen": "GEN_1",
+      "revision": "1",
+      "entryPoint": "fetchLeetCodeToDB",
+      "testInput": "test",
+      "region": "asia-southeast1",
+      "runtime": "python312"
+    }
+  ]
+}
