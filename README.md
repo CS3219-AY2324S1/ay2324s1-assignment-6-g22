@@ -8,7 +8,11 @@
 - 4. For testing purposes, it is recommended to fetch only a small number of questions from Leetcode to save time. For repeated testing, you should be aware that PeerPrep will not add duplicate questions. Hence, as per point 3, you will have to delete inserted questions between each run or increase the number of questions fetched each successive run.
 - 5. The PeerPrep question database you will be interacting with is hosted in the cloud. Please avoid deleting the first 9 questions and only delete questions you have inserted.
 
-# Testing (Cloud: Cloud Serverless Function with Cloud PeerPrep)
+# Testing
+
+- Two ways of testing are provided. Testing on the cloud does not require any setup but may not be stable depending on Google Cloud. If testing on the cloud fails, proceed with local testing.
+
+## Testing (Cloud: Cloud Serverless Function with Cloud PeerPrep)
 
 - Access [PrepPrpe](http://35.247.174.141:3000/)
 
@@ -19,7 +23,7 @@
 - 1. Premium Questions
 - 2. Question is already in PeerPrep
 
-# Testing (Local: Local Serverless Function with Local PeerPrep)
+## Testing (Local: Local Serverless Function with Local PeerPrep)
 
 ### Setup
 
