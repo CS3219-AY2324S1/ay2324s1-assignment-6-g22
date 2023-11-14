@@ -10,11 +10,11 @@
 
 # Testing
 
-- Two ways of testing are provided. Testing on the cloud does not require any setup but may not be stable depending on Google Cloud. If testing on the cloud fails, proceed with local testing.
+- Two ways of testing are provided. Testing on the cloud does not require any setup but may not be stable depending on Google Cloud (IP address changed, Credits ran out, etc). If testing on the cloud fails, proceed with local testing.
 
 ## Testing (Cloud: Cloud Serverless Function with Cloud PeerPrep)
 
-- Access [PrepPrpe](http://35.247.174.141:3000/)
+- Access [PeerPrep](http://35.247.174.141/)
 
 - Run the [Serverless Function](https://asia-southeast1-peerprep-402404.cloudfunctions.net/serverlessfunc/?num=5)
 
